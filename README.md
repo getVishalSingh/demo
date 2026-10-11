@@ -9,7 +9,7 @@ dotnet run --project src/EmpApi.Api --environment Development
 Swagger UI: `/swagger`. Dev credentials (Development only): `admin` / `Admin@123`.
 
 ## Auth
-`POST /api/auth/login` with `{ "username": "...", "password": "..." }` returns a JWT; send it as the header `Authorization: ******
+`POST /api/auth/login` with `{ "username": "...", "password": "..." }` returns a JWT. Send it in the `Authorization` header using the `Bearer` scheme followed by the token.
 
 ## Endpoints (require JWT)
 | Method | Route | Description |
