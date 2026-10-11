@@ -1,0 +1,11 @@
+services:
+  api:
+    build: .
+    ports: ["8080:8080"]
+    environment:
+      Jwt__Key: ${JWT_KEY:?set JWT_KEY (>=32 chars)}
+      AdminUser__Password: ${ADMIN_PASSWORD:?set ADMIN_PASSWORD}
+    volumes:
+      - empdata:/data
+volumes:
+  empdata:
